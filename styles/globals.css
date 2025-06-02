@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-hueneu-primary-rgb: 168, 163, 157; /* #A8A39D */
+  --color-hueneu-secondary-rgb: 212, 195, 184; /* #D4C3B8 */
+  --color-hueneu-accent-rgb: 255, 107, 107; /* #FF6B6B */
+  --color-hueneu-primary-dark-rgb: 51, 51, 51; /* #333333 */
+  --color-hueneu-secondary-light-rgb: 245, 245, 245; /* #F5F5F5 */
+  --color-hueneu-secondary-dark-rgb: 136, 136, 136; /* #888888 */
+  --color-white-rgb: 255, 255, 255;
+  --color-black-rgb: 0, 0, 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-hueneu-secondary-light text-hueneu-primary font-sans antialiased;
+  /* font-sans is Inter, defined in Layout.js via next/font/google */
+}
+
+/* Custom scrollbar for a more branded feel - optional */
+body::-webkit-scrollbar {
+  width: 8px;
+}
+
+body::-webkit-scrollbar-track {
+  @apply bg-hueneu-secondary-light;
+}
+
+body::-webkit-scrollbar-thumb {
+  @apply bg-hueneu-secondary rounded-md;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  @apply bg-hueneu-primary;
+}
+
+/* Basic responsive typography adjustments */
+h1 {
+  @apply text-4xl md:text-5xl lg:text-6xl;
+}
+
+h2 {
+  @apply text-3xl md:text-4xl lg:text-5xl;
+}
+
+h3 {
+  @apply text-2xl md:text-3xl;
+}
+
+/* Add a subtle focus style for accessibility */
+*:focus-visible {
+  @apply outline-none ring-2 ring-hueneu-accent ring-offset-2 ring-offset-hueneu-secondary-light;
+}
