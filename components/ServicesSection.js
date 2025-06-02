@@ -31,10 +31,10 @@ const itemVariants = {
 
 export default function ServicesSection() {
   return (
-    <section id="services" className="min-h-screen py-20 px-4 md:px-8 bg-hueneu-secondary-light flex flex-col justify-center items-center">
+    <section id="services" className="min-h-screen py-20 px-4 md:px-8 bg-hueneu-light-bg flex flex-col justify-center items-center">
       <div className="container mx-auto text-center">
         <motion.h2 
-          className="text-4xl md:text-5xl font-display text-hueneu-primary-dark mb-16"
+          className="text-4xl md:text-5xl font-secondary text-hueneu-dark-text mb-16"
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
@@ -52,13 +52,13 @@ export default function ServicesSection() {
           {services.map((service) => (
             <motion.div 
               key={service.name} 
-              className="group bg-white p-8 rounded-lg shadow-custom-subtle hover:shadow-custom-hover transition-all duration-300 ease-in-out transform hover:-translate-y-1 flex flex-col items-center"
+              className="group bg-white p-8 rounded-lg shadow-subtle hover:shadow-interactive transition-all duration-300 ease-in-out transform hover:-translate-y-1 flex flex-col items-center"
               variants={itemVariants}
             >
               <div className="relative w-16 h-16 mb-6 text-hueneu-primary group-hover:text-hueneu-accent transition-colors duration-300">
-                <Image src={service.icon} alt={`${service.name} icon`} layout="fill" objectFit="contain" />
+                <Image src={service.icon} alt={`${service.name} icon`} fill className="object-contain" />
               </div>
-              <h3 className="text-2xl font-semibold text-hueneu-primary-dark mb-3">{service.name}</h3>
+              <h3 className="text-2xl font-semibold text-hueneu-dark-text mb-3">{service.name}</h3>
               <p className="text-hueneu-primary leading-relaxed text-sm">{service.copy}</p>
             </motion.div>
           ))}

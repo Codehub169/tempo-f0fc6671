@@ -11,7 +11,7 @@ export default function Layout({ children }) {
   return (
     // Apply the Inter font class to the main div for global font styling
     // Add a subtle background color from the palette for warmth
-    <div className={`${inter.variable} font-sans bg-hueneu-secondary-light min-h-screen flex flex-col text-hueneu-primary`}>
+    <div className={`${inter.variable} font-sans bg-hueneu-light-bg min-h-screen flex flex-col text-hueneu-primary`}>
       {/* Main content area */}
       <main className="flex-grow">
         {children}

@@ -44,35 +44,35 @@ export default function ContactSection() {
     }
   };
 
-  const inputClass = "w-full px-4 py-3 bg-hueneu-secondary-light border border-hueneu-secondary rounded-md focus:ring-2 focus:ring-hueneu-accent focus:border-hueneu-accent outline-none transition-colors duration-200 placeholder-hueneu-primary/70 text-hueneu-primary-dark";
+  const inputClass = "w-full px-4 py-3 bg-hueneu-light-bg border border-hueneu-secondary rounded-md focus:ring-2 focus:ring-hueneu-accent focus:border-hueneu-accent outline-none transition-colors duration-200 placeholder-hueneu-primary/70 text-hueneu-dark-text";
 
   return (
-    <section id="contact" className="min-h-screen py-20 px-4 md:px-8 bg-hueneu-secondary-light flex flex-col justify-center items-center">
+    <section id="contact" className="min-h-screen py-20 px-4 md:px-8 bg-hueneu-light-bg flex flex-col justify-center items-center">
       <div className="container mx-auto max-w-2xl">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.6 }}
-          className="bg-white p-8 md:p-12 rounded-xl shadow-custom-strong relative"
+          className="bg-white p-8 md:p-12 rounded-xl shadow-interactive relative"
         >
-          <h2 className="text-3xl md:text-4xl font-display text-hueneu-primary-dark text-center mb-8">Let's Work Together</h2>
+          <h2 className="text-3xl md:text-4xl font-secondary text-hueneu-dark-text text-center mb-8">Let's Work Together</h2>
           
           <form onSubmit={handleSubmit} className="space-y-6">
             <div>
-              <label htmlFor="name" className="block text-sm font-medium text-hueneu-primary-dark mb-1">Full Name</label>
+              <label htmlFor="name" className="block text-sm font-medium text-hueneu-dark-text mb-1">Full Name</label>
               <input type="text" name="name" id="name" value={formData.name} onChange={handleChange} required className={inputClass} placeholder="Your Name" />
             </div>
             <div>
-              <label htmlFor="email" className="block text-sm font-medium text-hueneu-primary-dark mb-1">Email Address</label>
+              <label htmlFor="email" className="block text-sm font-medium text-hueneu-dark-text mb-1">Email Address</label>
               <input type="email" name="email" id="email" value={formData.email} onChange={handleChange} required className={inputClass} placeholder="your.email@example.com" />
             </div>
             <div>
-              <label htmlFor="subject" className="block text-sm font-medium text-hueneu-primary-dark mb-1">Subject</label>
+              <label htmlFor="subject" className="block text-sm font-medium text-hueneu-dark-text mb-1">Subject</label>
               <input type="text" name="subject" id="subject" value={formData.subject} onChange={handleChange} required className={inputClass} placeholder="Project Idea / Inquiry" />
             </div>
             <div>
-              <label htmlFor="message" className="block text-sm font-medium text-hueneu-primary-dark mb-1">Your Message</label>
+              <label htmlFor="message" className="block text-sm font-medium text-hueneu-dark-text mb-1">Your Message</label>
               <textarea name="message" id="message" value={formData.message} onChange={handleChange} rows={5} required className={`${inputClass} resize-none`} placeholder="Tell us about your story..."></textarea>
             </div>
             
@@ -80,7 +80,7 @@ export default function ContactSection() {
               <button 
                 type="submit" 
                 disabled={status === 'loading'}
-                className="inline-flex items-center justify-center px-8 py-3 bg-hueneu-accent text-white font-medium rounded-md shadow-md hover:bg-opacity-90 focus:outline-none focus:ring-2 focus:ring-hueneu-accent focus:ring-offset-2 transition-all duration-200 ease-in-out transform hover:scale-105 disabled:opacity-70 disabled:cursor-not-allowed group"
+                className="inline-flex items-center justify-center px-8 py-3 bg-hueneu-accent text-white font-medium rounded-md shadow-md hover:bg-opacity-90 focus:outline-none focus:ring-2 focus:ring-hueneu-accent focus:ring-offset-2 focus:ring-offset-white transition-all duration-200 ease-in-out transform hover:scale-105 disabled:opacity-70 disabled:cursor-not-allowed group"
               >
                 {status === 'loading' ? (
                   <>
@@ -103,7 +103,7 @@ export default function ContactSection() {
             <motion.div 
               initial={{ opacity: 0, y: 10 }} 
               animate={{ opacity: 1, y: 0 }} 
-              className={`mt-6 p-4 rounded-md text-sm flex items-center ${status === 'success' ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'}`}
+              className={`mt-6 p-4 rounded-md text-sm flex items-center ${status === 'success' ? 'bg-hueneu-success/20 text-hueneu-success' : 'bg-hueneu-error/20 text-hueneu-error'}`}
             >
               {status === 'success' ? <CheckCircle2 size={20} className="mr-2" /> : <AlertCircle size={20} className="mr-2" />}
               {feedbackMessage}
@@ -111,7 +111,7 @@ export default function ContactSection() {
           )}
 
           <div className="mt-12 text-center">
-            <p className="text-hueneu-primary-dark mb-2">Connect with us</p>
+            <p className="text-hueneu-dark-text mb-2">Connect with us</p>
             <a 
               href="https://instagram.com/hueneu_" 
               target="_blank" 

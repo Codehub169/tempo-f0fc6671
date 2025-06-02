@@ -7,7 +7,7 @@ export default function HeroSection() {
   return (
     <section 
       id="hero"
-      className="min-h-screen flex flex-col items-center justify-center relative text-center p-8 bg-gradient-to-br from-hueneu-secondary-light via-hueneu-secondary to-hueneu-secondary-dark overflow-hidden"
+      className="min-h-screen flex flex-col items-center justify-center relative text-center p-8 bg-gradient-to-br from-hueneu-light-bg via-hueneu-secondary to-hueneu-secondary-text overflow-hidden"
     >
       {/* Animated Logo */}
       <motion.div
@@ -24,7 +24,7 @@ export default function HeroSection() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.5, ease: "circOut" }}
-        className="text-3xl sm:text-4xl md:text-5xl font-display font-medium text-hueneu-primary tracking-tight mb-4"
+        className="text-3xl sm:text-4xl md:text-5xl font-secondary font-medium text-hueneu-primary tracking-tight mb-4"
       >
         Where stories find their aesthetic.
       </motion.h1>

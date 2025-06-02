@@ -6,9 +6,9 @@
   --color-hueneu-primary-rgb: 168, 163, 157; /* #A8A39D */
   --color-hueneu-secondary-rgb: 212, 195, 184; /* #D4C3B8 */
   --color-hueneu-accent-rgb: 255, 107, 107; /* #FF6B6B */
-  --color-hueneu-primary-dark-rgb: 51, 51, 51; /* #333333 */
-  --color-hueneu-secondary-light-rgb: 245, 245, 245; /* #F5F5F5 */
-  --color-hueneu-secondary-dark-rgb: 136, 136, 136; /* #888888 */
+  --color-hueneu-primary-dark-rgb: 51, 51, 51; /* #333333, maps to hueneu-dark-text */
+  --color-hueneu-secondary-light-rgb: 245, 245, 245; /* #F5F5F5, maps to hueneu-light-bg */
+  --color-hueneu-secondary-dark-rgb: 136, 136, 136; /* #888888, maps to hueneu-secondary-text */
   --color-white-rgb: 255, 255, 255;
   --color-black-rgb: 0, 0, 0;
 }
@@ -18,8 +18,8 @@ html {
 }
 
 body {
-  @apply bg-hueneu-secondary-light text-hueneu-primary font-sans antialiased;
-  /* font-sans is Inter, defined in Layout.js via next/font/google */
+  @apply bg-hueneu-light-bg text-hueneu-primary font-sans antialiased;
+  /* font-sans is Inter, defined in Layout.js via next/font/google and tailwind.config.js */
 }
 
 /* Custom scrollbar for a more branded feel - optional */
@@ -28,7 +28,7 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-track {
-  @apply bg-hueneu-secondary-light;
+  @apply bg-hueneu-light-bg;
 }
 
 body::-webkit-scrollbar-thumb {
@@ -54,5 +54,5 @@ h3 {
 
 /* Add a subtle focus style for accessibility */
 *:focus-visible {
-  @apply outline-none ring-2 ring-hueneu-accent ring-offset-2 ring-offset-hueneu-secondary-light;
+  @apply outline-none ring-2 ring-hueneu-accent ring-offset-2 ring-offset-hueneu-light-bg;
 }

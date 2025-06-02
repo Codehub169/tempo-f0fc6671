@@ -16,7 +16,7 @@ const StorySection = () => {
   return (
     <section 
       id="story"
-      className="min-h-screen py-20 px-6 md:px-12 lg:px-24 flex flex-col items-center justify-center text-center bg-hueneu-secondary-light relative overflow-hidden"
+      className="min-h-screen py-20 px-6 md:px-12 lg:px-24 flex flex-col items-center justify-center text-center bg-hueneu-light-bg relative overflow-hidden"
     >
       {/* Decorative subtle background gradient element */}
       <div 
@@ -36,7 +36,7 @@ const StorySection = () => {
       >
         {/* Section Title */}
         <motion.h2 
-          className="text-4xl md:text-5xl lg:text-6xl font-display text-hueneu-primary mb-8 leading-tight"
+          className="text-4xl md:text-5xl lg:text-6xl font-secondary text-hueneu-primary mb-8 leading-tight"
           variants={textVariants}
         >
           Hue <span className="text-hueneu-accent">+</span> Neu
@@ -44,7 +44,7 @@ const StorySection = () => {
         
         {/* Introductory Paragraph */}
         <motion.p 
-          className="text-lg md:text-xl text-hueneu-primary-dark mb-6 leading-relaxed font-body"
+          className="text-lg md:text-xl text-hueneu-primary-dark mb-6 leading-relaxed"
           variants={textVariants}
         >
           At hueneu, we believe in the quiet power of balance. &ldquo;Hue&rdquo; signifies the vibrant burst of creativity, the unexpected splash of color that brings a story to life. &ldquo;Neu&rdquo; represents the grounding calm of neutrality, the intentional space that allows ideas to breathe and resonate.
@@ -52,7 +52,7 @@ const StorySection = () => {
 
         {/* Second Paragraph emphasizing balance */}
         <motion.p 
-          className="text-lg md:text-xl text-hueneu-primary-dark mb-12 leading-relaxed font-body"
+          className="text-lg md:text-xl text-hueneu-primary-dark mb-12 leading-relaxed"
           variants={textVariants}
         >
           It's in this harmonious dance between the vivid and the serene that true magic unfolds—designs that are not just seen, but deeply felt. We craft experiences that whisper, yet leave a lasting echo.
