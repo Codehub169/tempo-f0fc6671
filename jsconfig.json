@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "./*"
+      ]
+    },
+    "jsx": "preserve",
+    "module": "ESNext",
+    "target": "ESNext",
+    "moduleResolution": "Node",
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true
+  },
+  "include": [
+    "**/*.js",
+    "**/*.jsx",
+    "pages/**/*.js",
+    "components/**/*.js",
+    "lib/**/*.js"
+  ],
+  "exclude": [
+    "node_modules",
+    ".next",
+    "out",
+    "public"
+  ]
+}
